@@ -40,7 +40,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "/var/www/html/Curso_PHP_con_HTML",
+    "last_opened_file_path": "/var/www/html/Curso_PHP_con_HTML/validando-datos",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -52,12 +52,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/validando-datos" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/tipos-de-inputs" />
       <recent name="$PROJECT_DIR$/subiendo-imagenes" />
       <recent name="$PROJECT_DIR$/formulario-post" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/formulario-contacto" />
       <recent name="$PROJECT_DIR$/formulario-get" />
     </key>
   </component>
@@ -80,6 +82,8 @@
       <workItem from="1763538562276" duration="2983000" />
       <workItem from="1763541553963" duration="5167000" />
       <workItem from="1763836364695" duration="5335000" />
+      <workItem from="1763846294408" duration="108000" />
+      <workItem from="1763922712470" duration="8046000" />
     </task>
     <servers />
   </component>

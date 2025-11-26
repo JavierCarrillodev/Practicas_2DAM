@@ -1,165 +1,243 @@
+:root {
+    --primary-color: #4285f4;
+    --text-color: #202124;
+    --text-color-light: #5f6368;
+    --bg-color: #ffffff;
+    --bg-color-hover: #f8f9fa;
+    --border-color: #dfe1e5;
+    --button-bg: #f8f9fa;
+    --button-border: #f8f9fa;
+    --button-hover-border: #dadce0;
+    --footer-bg: #f2f2f2;
+    --footer-border: #dadce0;
+    --font-family: arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
     padding: 0;
-    font-size: 13px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-header {
-    width: 100%;
-    height: 60px;
+    font-size: 14px;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
-    text-decoration: none; /* Quitamos el estilo por defecto de subrayado */
-    cursor: pointer; /* Cuando pasamos el cursor por encima nos saldra la manita para hacer click */
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    width: 100%;
+    padding: 10px 20px;
 }
 
 header nav {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 header nav .nav-right-section {
-    width: 250px;
-    height: auto;
     display: flex;
     list-style: none;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
 }
+
 nav .nav-right-section a {
-    margin-right: 10px; /* Nos servirá para separar cada link */
-    color: #000000;
+    color: var(--text-color);
+    font-size: 13px;
 }
-nav .nav-right-section .menu-icon {
+
+nav .nav-right-section .menu-icon a {
+    display: block;
     background-image: url("https://static.thenounproject.com/png/756729-200.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    width: 25px;
-    height: 25px;
-    margin-left: 10px;
-}
-nav .nav-right-section img {
-    border-radius: 50%;
-    margin-left: 20px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
 }
 
+nav .nav-right-section .menu-icon a:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+nav .nav-right-section img {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+
+/* Main Content */
 main {
-    margin-top: 150px;
-    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -50px; /* Visual adjustment to center vertically like Google */
+    padding: 20px;
 }
+
 main .main-logo {
-    width: 530px;
-    margin: 0 auto;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
+    max-width: 100%;
 }
+
 main .main-logo img {
-    width: 300px;
+    width: 272px;
+    max-width: 100%;
+    height: auto;
 }
 
 main .main-input {
-    width: 535px;
-    margin: 0 auto;
-    margin-bottom: 35px;
-}
-main .main-input-container {
-    width: 525px;
-    border-radius: 100px;
-    border: 1px solid #dfe1e5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-main .main-input input {
-    width: 450px;
-    height: 40px;
-    border: none;
-    outline: none;
-}
-main .main-input-container:hover {
-    box-shadow: 0 1px 6px 0 #20212447;
-    border-color: #dfe1e500;
-}
-main input::placeholder {
-    color: #757373; /* color gris claro */
+    width: 100%;
+    max-width: 584px;
+    margin-bottom: 30px;
 }
 
-    main .main-input .search-icon {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png');
+main .main-input-container {
+    width: 100%;
+    border-radius: 24px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+main .main-input-container:hover,
+main .main-input-container:focus-within {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-color: transparent;
+}
+
+main .main-input input {
+    flex: 1;
+    height: 34px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+main .main-input .search-icon,
+main .main-input .micro-icon {
+    width: 24px;
+    height: 24px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    width: 18px;
-    height: 18px;
+    opacity: 0.6;
+    cursor: pointer;
 }
+
+main .main-input .search-icon {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png');
+    margin-left: 10px;
+}
+
 main .main-input .micro-icon {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
+    margin-right: 10px;
 }
 
 main .main-buttons {
     display: flex;
     justify-content: center;
-
-
-
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 main .main-buttons button {
-    height: 36px;
-    background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
+    background-color: var(--button-bg);
+    border: 1px solid var(--button-border);
     font-size: 14px;
-    color: #171616;
-    border-radius: 5px;
-    padding: 0 15px;
-    margin-right: 15px;
-
-
-}
-main .main-buttons button:hover {
-    border: 1px solid #c6c6c6;
-    box-shadow: 0 1px 1px #000001;
-    color: #222;
+    color: var(--text-color);
+    border-radius: 4px;
+    padding: 0 16px;
+    height: 36px;
     cursor: pointer;
+    transition: all 0.2s;
 }
 
-footer {
-    width: 100%;
-    height: 50px;
-    position: absolute;
-    bottom: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    font-size: 13px;
-    background-color: #f2f2f2;
-    border-top: 1px solid #e4e4e4 ;
+main .main-buttons button:hover {
+    border: 1px solid var(--button-hover-border);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    color: #202124;
 }
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    border-top: 1px solid var(--footer-border);
+    font-size: 14px;
+    color: var(--text-color-light);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
 footer ul {
-    margin: 10px;
     list-style: none;
     display: flex;
-    padding-left: 0;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 10px 0;
+    gap: 20px;
 }
-footer .footer-left {
-    justify-self: left;
 
-}
-footer .footer-right {
-    justify-self: right;
-}
 footer ul li a {
-    margin: 10px;
-    color: #5f6368;
+    color: var(--text-color-light);
+    display: block;
+    padding: 5px 0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+
+    footer ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    main .main-buttons {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    main .main-buttons div,
+    main .main-buttons button {
+        width: 100%;
+    }
 }
 
 
